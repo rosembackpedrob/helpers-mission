@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: HopeLogoScreen
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: -251700249, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: -1119920755, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: 1780026570, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: 1562493723, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: 1461060283, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: 608663356, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: -1070249304, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: 1844240373, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: -1153098093, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: 763018081, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: -5344970, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: -2125312107, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: -1589778733, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: 700617433, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: 1229782769, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: -1054565782, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: 44478559, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: -2041901598, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: -130506923, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: -289011935, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: -997835975, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: -940587861, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: -625308947, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  - {fileID: 912868392, guid: 07c2c74a67e003746992edd8bbf33e6e, type: 3}
+  m_MinSpeed: 5
+  m_MaxSpeed: 5
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
