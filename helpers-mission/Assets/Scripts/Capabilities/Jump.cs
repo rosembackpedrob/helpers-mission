@@ -6,6 +6,8 @@ public class Jump : MonoBehaviour
 {
     public ParticleSystem dust; //Particles
 
+     public Animator animator; //Animator
+
     [SerializeField] private InputController input = null; //generic input
     [SerializeField, Range(0f, 10f)] private float jumpHeight = 3f;
     [SerializeField, Range(0, 5)] private int maxAirJumps = 0;
@@ -14,13 +16,14 @@ public class Jump : MonoBehaviour
 
     private Rigidbody2D rb;
     private Ground ground;
-    private Vector2 velocity;
+    public static Vector2 velocity;
     
     private int jumpPhase;
     private float defaultGravityScale;
 
-    private bool desiredJump;
+    public bool desiredJump;
     private bool onGround;
+    public static bool boxHeavy = false;
 
     // Start is called before the first frame update
     void Awake()
@@ -66,11 +69,13 @@ public class Jump : MonoBehaviour
         }
 
         rb.velocity = velocity;
+
+        animator.SetFloat("Jump", velocity.y);
     }
 
     private void JumpAction()
     {
-        if(onGround || jumpPhase < maxAirJumps)
+        if(onGround && !boxHeavy|| jumpPhase < maxAirJumps)
         {
             jumpPhase +=1;
             float jumpSpeed = Mathf.Sqrt(-2f * Physics2D.gravity.y *jumpHeight);
@@ -80,6 +85,9 @@ public class Jump : MonoBehaviour
             }
             velocity.y += jumpSpeed;
 
+            
+
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.jumpSFX);
         }
     }
     

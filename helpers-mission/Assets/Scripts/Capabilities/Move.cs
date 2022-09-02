@@ -5,6 +5,8 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     public ParticleSystem dust; //Particles
+
+    public Animator animator; //Animator
     
     [SerializeField] private InputController input = null; //generic input
     
@@ -40,6 +42,7 @@ public class Move : MonoBehaviour
         {
             characterScale.x = -1;
             CreateDust();
+            
         }
         if (direction.x > 0f)
         {
@@ -61,6 +64,8 @@ public class Move : MonoBehaviour
         velocity.x = Mathf.MoveTowards(velocity.x, desiredVelocity.x, maxSpeedChange);
 
         rb.velocity = velocity;
+
+        animator.SetFloat("Speed", direction.sqrMagnitude);
     }
 
     //method/function for dust particle system

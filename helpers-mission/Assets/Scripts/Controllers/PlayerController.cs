@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="PlayerController", menuName ="InputController/PlayerController")]
 public class PlayerController : InputController
 {
-    //Implementing the methods
+    //Overriding the abstract methods
     public override bool RetrieveJumpInput()
     {
         return Input.GetKeyDown(KeyCode.J); //listen jump button down event

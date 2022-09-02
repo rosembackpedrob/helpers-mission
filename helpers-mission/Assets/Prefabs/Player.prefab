@@ -48,9 +48,10 @@ GameObject:
   - component: {fileID: 8686055424623152104}
   - component: {fileID: 8686055424623152105}
   - component: {fileID: 8686055424623152108}
+  - component: {fileID: 1982408605611066615}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,6 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dust: {fileID: 8686055425005697071}
+  animator: {fileID: 1982408605611066615}
   input: {fileID: 11400000, guid: 356b287409bf5424baee402db89dfc79, type: 2}
   maxSpeed: 12
   maxAcceleration: 100
@@ -219,11 +221,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dust: {fileID: 8686055425197240058}
+  animator: {fileID: 1982408605611066615}
   input: {fileID: 11400000, guid: 356b287409bf5424baee402db89dfc79, type: 2}
-  jumpHeight: 6.5
+  jumpHeight: 7
   maxAirJumps: 0
   donwardMovementMultiplier: 5
   upwardMovementMultiplier: 2
+  desiredJump: 0
 --- !u!114 &8686055424623152105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +255,27 @@ MonoBehaviour:
   grabDetect: {fileID: 8686055425321626621}
   boxHolder: {fileID: 8686055423629029494}
   rayDist: 0.5
+  carrying: 0
+--- !u!95 &1982408605611066615
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8686055424623150103}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c8e69b505f79b74448c6d66a351906cf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8686055425005697106
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,7 +877,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 100
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -5664,7 +5689,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 100
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -5930,7 +5955,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 200
+      scalar: 100
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -9887,7 +9912,7 @@ GameObject:
   m_Layer: 3
   m_Name: GrabDetect
   m_TagString: Untagged
-  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
